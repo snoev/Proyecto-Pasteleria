@@ -4,11 +4,10 @@
 	--background: #2d353b;
 	--nav-color: #1a1f22;
 	--hover-nav1: #034271;
-	--Color-fondo-principal: #F26419;
+	--naranja: #F26419;
 	--whatsapp: #25d366;
 	--primary: #33658A;
 	--secondary: #F6AE2D;
-	--background: #eee;
 	--highlight: #ffda79;
 	/* Theme color */
 	--theme: var(--primary);
@@ -29,7 +28,7 @@ html {
 body {
 	min-height: 100vh;
 	width: 100%;
-    background-color: var(--Color-fondo-principal);
+    background-color: var(--naranja);
 }
 
 /* MENU NAVBAR */
@@ -233,9 +232,26 @@ body {
 	position: absolute;
 	z-index: 1111;
 	left: 0;
-	/* background-color: #0095a3; */
-	word-break: break-word;
 	word-wrap: break-word;
+	background-color: var(--primary);
+}
+
+#hola{
+	position: relative;
+	width: 100%;
+	height: 71%;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+	height: 30vh;
+	width: 50%;
+	top: 20vh;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: center;
+	margin-left: 20px;
+	padding: 4.78vw;
 }
 
 .display {
