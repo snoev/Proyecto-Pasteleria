@@ -1,14 +1,14 @@
 /* variables colores */
 :root {
 	--letter-white: #fff;
-	--background: #2d353b;
-	--nav-color: #1a1f22;
+	--background: #f26419;
+	--nav-color: #b3480e;
 	--hover-nav1: #034271;
 	--naranja: #F26419;
 	--whatsapp: #25d366;
-	--primary: #33658A;
+	--primary: #86bbd8;
 	--secondary: #F6AE2D;
-	--highlight: #ffda79;
+	--highlight: #ffebd4;
 	/* Theme color */
 	--theme: var(--primary);
 }
@@ -86,7 +86,7 @@ body {
 	align-items: center;
 	z-index: 11111111111;
 	transition: 1s ease;
-	background-color: #000;
+	background-color: #F26419;
 	/* -webkit-filter: invert(100%); */
     /* filter: invert(100%); */
 	/* mix-blend-mode: difference; */
@@ -284,7 +284,7 @@ footer {
 	position: relative;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	padding: 50px 50px;
-	background-color: var(--Color-fondo-principal);
+	background-color: var(--secondary);
 	z-index: 1;
 }
 
