@@ -28,22 +28,36 @@ html{
     height: 100vh;
    
 
-} .login .formulario{
-
+} .login .caja-naranja{
     height: 100%;
     width: 100%;
     background-color: #F26419;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding-left: 0;
 /*    border-radius: 10px;
     border: 2px solid black ; */
     color: white;
 }
+.formulario{
+    max-width: 400px;
+    text-align: center;
+}
+
+.login form {
+/*  margin-top: 40%; */
+    background: none;
+    box-shadow: none;
+    outline: none;
+    bottom: unset;
+    background-color:#F26419;
+    padding: 5px;
+   
+}
 
 .login input{
-    width: 300px;
+    width: 80%;
     height: 7vh;
     border-radius: 5px;
     padding: 5px;
@@ -56,16 +70,8 @@ html{
     outline: none;
     
 }
-.login form {
-    background: none;
-    box-shadow: none;
-    outline: none;
-    bottom: unset;
-    background-color:#F26419;
-    padding: 5px;
-    
-}
-.login .formulario a{
+
+.login .caja-naranja a{
     justify-content: end;
     align-items: end;
     text-decoration: none; 
@@ -79,12 +85,12 @@ html{
     background-color: #86BBD8;
     border: none;
 }
-.login .formulario a:hover{
+.login .caja-naranja a:hover{
     color: black;
     cursor: pointer;
 }
 .login .iniciar{
-    margin-top: 10vh;
+/*    margin-top: 10vh; */
     background-color: #F6AE2D;
 
 }
@@ -98,6 +104,8 @@ html{
     cursor: pointer;
     color: #F26419;
 }
+
+/*
 .login .formulario .check{
     display: flex;
     margin: 0;
@@ -109,3 +117,5 @@ html{
     width: 15px;
     height: 15px;
 }
+
+*/ 
