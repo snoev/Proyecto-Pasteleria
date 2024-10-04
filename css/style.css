@@ -28,7 +28,6 @@ html {
 body {
 	min-height: 100vh;
 	width: 100%;
-    background-color: var(--naranja);
 }
 
 /* MENU NAVBAR */
@@ -36,6 +35,7 @@ body {
 	display: flex;
 	justify-content: space-between; /* Separa los elementos a ambos lados */
 	align-items: center;
+	background-color: var(--naranja);
 }
 
 .menu {
