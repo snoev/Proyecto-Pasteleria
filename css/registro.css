@@ -105,6 +105,19 @@ html{
     color: #F26419;
 }
 
+.volver :hover{
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(245, 106, 25, 0.603);
+}
+.contenido{
+    background-image:url("../img/medialunas.jpg");
+    /*background-size: contain; */
+    width: 60%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
 /*
 .login .formulario .check{
     display: flex;
