@@ -28,7 +28,6 @@ html {
 body {
 	min-height: 100vh;
 	width: 100%;
-    background-color: var(--naranja);
 }
 
 /* MENU NAVBAR */
@@ -36,6 +35,7 @@ body {
 	display: flex;
 	justify-content: space-between; /* Separa los elementos a ambos lados */
 	align-items: center;
+	background-color: var(--naranja);
 }
 
 .menu {
@@ -55,6 +55,9 @@ body {
 	justify-content: flex-start; /* Alinea los elementos del menú a la izquierda */
 	align-items: center;
 	width: 100%;
+}
+.logo-img img{
+	filter: drop-shadow(0px 0px 3px black);
 }
 .menu-option-der:first-child {
 	margin-left: auto;
