@@ -2,13 +2,15 @@
 :root {
 	--letter-white: #fff;
 	--background: #f26419;
-	--nav-color: #b3480e;
-	--hover-nav1: #034271;
-	--naranja: #F26419;
 	--whatsapp: #25d366;
-	--primary: #86bbd8;
-	--secondary: #F6AE2D;
-	--highlight: #ffebd4;
+
+	--hover-nav1: #034271;
+
+	--primary: #F26419;
+	--secondary: #b3480e;
+	--tertiary: #F6AE2D;
+	--highlight1: #ffebd4;
+	--highlight2: #86bbd8;
 	/* Theme color */
 	--theme: var(--primary);
 }
@@ -19,6 +21,8 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	font-family: 'rubik'; /* Name your font family */
+    src: url('Rubik-Regular.ttf'); 
 }
 
 html {
@@ -35,7 +39,7 @@ body {
 	display: flex;
 	justify-content: space-between; /* Separa los elementos a ambos lados */
 	align-items: center;
-	background-color: var(--naranja);
+	background-color: var(--primary);
 }
 
 .menu {
@@ -244,7 +248,7 @@ body {
 	z-index: 1111;
 	left: 0;
 	word-wrap: break-word;
-	background-color: var(--primary);
+	background-color: var(--highlight2);
 }
 
 #hola{
@@ -285,18 +289,9 @@ body {
 	visibility: visible;
 }
 
-* {
-    font-family: 'rubik'; /* Name your font family */
-    src: url('Rubik-Regular.ttf'); 
-}
-img {
+.foot-logo{
     width: 302px;
     height: 67px;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 .footer {
     background-color: #000;
@@ -352,6 +347,31 @@ body {
         text-align: center;
     }
 }
+
+.social-icons a:hover {
+    color: #aaa;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111;
+}
+.footer-bottom p {
+    margin: 0;
+    color: #bbb;
+}
+ .linea{
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(170, 170, 170); 
+}
+ /* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ARIAN FOOTER */
 
 .displaynone{
 	transform: scale(0);
