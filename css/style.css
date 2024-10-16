@@ -289,91 +289,6 @@ body {
 	visibility: visible;
 }
 
-<<<<<<< Updated upstream
-.foot-logo{
-    width: 302px;
-    height: 67px;
-}
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 40px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.footer-section {
-    flex: 1 1 200px;
-    margin: 20px;
-    text-align: center;
-}
-.footer h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.footer a {
-    color: #aaa;
-    text-decoration: none;
-}
-.footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-.social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 20px;
-}
-.social-icons a:hover {
-    color: #aaa;
-}
-.footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #111;
-}
-.footer-bottom p {
-    margin: 0;
-    color: #bbb;
-}
- .linea{
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(170, 170, 170); 
-}
- /* Responsive Design */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.social-icons a:hover {
-    color: #aaa;
-}
-.footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #111;
-}
-.footer-bottom p {
-    margin: 0;
-    color: #bbb;
-}
- .linea{
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(170, 170, 170); 
-}
- /* Responsive Design */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-=======
-<<<<<<< HEAD
 /* footer {
 	max-height: 100px;
 	max-width: 100%;
@@ -388,51 +303,10 @@ body {
 	z-index: 1;
 } */
 /* ARIAN FOOTER */
-
-.foot-logo{
-	width: 302px;
-	height: 67px;
-}
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 40px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.footer-section {
-    flex: 1 1 200px;
-    margin: 20px;
-    text-align: center;
-}
-.footer h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.footer a {
-    color: #aaa;
-    text-decoration: none;
-}
-.footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-=======
-* {
-    font-family: 'rubik'; /* Name your font family */
-    src: url('Rubik-Regular.ttf'); 
-}
-img {
+.img-foot{
     width: 302px;
     height: 67px;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 .footer {
     background-color: #000;
     color: #fff;
@@ -459,37 +333,10 @@ body {
     color: #fff;
     text-decoration: underline;
 }
->>>>>>> be1890b97b513b88ef776b4a47b4615a9a75ccdb
 .social-icons a {
     margin: 0 10px;
     color: #fff;
     font-size: 20px;
-<<<<<<< HEAD
-=======
-}
-.social-icons a:hover {
-    color: #aaa;
-}
-.footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #111;
-}
-.footer-bottom p {
-    margin: 0;
-    color: #bbb;
-}
- .linea{
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(170, 170, 170); 
-}
- /* Responsive Design */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
->>>>>>> be1890b97b513b88ef776b4a47b4615a9a75ccdb
 }
 .social-icons a:hover {
     color: #aaa;
@@ -514,7 +361,6 @@ body {
         text-align: center;
     }
 }
->>>>>>> Stashed changes
 /* ARIAN FOOTER */
 
 .displaynone{
