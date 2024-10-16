@@ -4,15 +4,8 @@ window.addEventListener("scroll", function () {
 });
 
 const navbarr = document.getElementById("nav-pastel");
-const botonuno = document.getElementById("btn-card-1");
 
 const displei = document.getElementById("displei");
-
-botonuno.addEventListener("click", (e) => {
-	displei.classList.remove("ocultar");
-	navbarr.classList.add("ocultar");
-
-});
 
 var navmobile = document.querySelector(".nav-mobile");
 var menu = document.querySelector(".nav");
