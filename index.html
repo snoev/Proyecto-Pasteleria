@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Página Principal</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <li class="menu-option"><a class="logo-link" href="#Inicio">Nosotros</a></li>
                 <li class="menu-option"><a class="logo-link" href="#Compra">Comprar</a></li>
                 <li class="menu-option"><a class="logo-link" href="#Membresias">Membresias</a></li>
-                <li class="menu-option"><a class="logo-link" href="#">Login</a></li> 
+                <li class="menu-option"><a class="logo-link" id="login">Login</a></li> 
 
             <div class="menu-derecha">
                 <li class="menu-option-der">
@@ -32,6 +32,26 @@
         </ul>
         <ion-icon name="grid-outline" class="nav-mobile"></ion-icon>
     </nav>
+    <div id="login-pop-up">
+        <img src="img/pepas.jpg" alt="hola si" id="img-login">
+        <div id="formulario-login">
+            <form method="post">
+                <p>E-mail:</p>
+                <input type="email" name="mail" required placeholder="Ingrese su correo electrónico"> <br>
+                <p>Contraseña:</p>
+                <input type="password" name="contrasena" required placeholder="Ingrese contraseña">
+                <div class="check">
+                    <input type="checkbox" name="recordar" class="cajita"> <label for="recordar">Recordar inicio de sesión</label>
+                </div>
+                <!--<ul>
+                    <li>Debe incluir al menos 1 número.</li>
+                    <li>Debe contener al menos 1 letra mayúscula.</li>
+                    <li>La contraseña debe incluir minimo 8 caracteres.</li>
+                </ul> -->
+                <input class="iniciar" type="submit" value="iniciarSesion"> <br>
+            </form>
+        </div>
+    </div>
     <section class="carruzel">
 
     </section>
@@ -61,10 +81,10 @@
             </div>
             <div class="footer-section">
                 <h4 class="linea">Acceso rapido</h4>
-                <p><a href="#home">Inicio</a></p>
-                <p><a href="#services">Nuestros servicios</a></p>
-                <p><a href="#about">Sobre nosotros</a></p>
-                <p><a href="#contact">Contacto</a></p>
+                <p><a href="#Inicio">Inicio</a></p>
+                <p><a href="#Compra">Nuestros productos</a></p>
+                <p><a href="#Membresias">Membresias</a></p>
+                <p><a href="#">Contacto</a></p>
             </div>
             <div class="footer-section">
                 <h4 class="linea">Siguenos!</h4>
