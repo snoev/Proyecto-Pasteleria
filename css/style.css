@@ -187,7 +187,7 @@ body {
 	left: 3000px;
 }
 
-#fcb,#ig,#wsp{
+#fcb,#ig{
 	height: 35px;
 	width: 35px;
 	transition: 1s ease;
@@ -201,11 +201,6 @@ body {
 #ig:hover{
 	color: palevioletred;
 	filter: drop-shadow(0 0 0.75rem palevioletred);
-}
-
-#wsp:hover{
-	color: #25d366;
-	filter: drop-shadow(0 0 0.75rem #25d366);
 }
 
 .Inicio {
@@ -368,7 +363,7 @@ body {
 	transition: all 0.5s ease-in-out;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 669px) {
 	.menu .menu-option,
 	.menu-derecha {
 		flex-direction: column;
@@ -496,10 +491,9 @@ body {
 			opacity: 1;
 		}
 	}
-    footer {
-		height: 40vh;
-		gap: 0px;
-		padding: 5rem;
-		top: auto;
+	.footer-section {
+		flex: 1 1 20px;
+		margin: 10px;
+		text-align: center;
 	}
 }
