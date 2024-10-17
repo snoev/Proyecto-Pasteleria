@@ -15,7 +15,7 @@
                 <li class="menu-option"><a class="logo-link" href="#Inicio">Nosotros</a></li>
                 <li class="menu-option"><a class="logo-link" href="#Compra">Comprar</a></li>
                 <li class="menu-option"><a class="logo-link" href="#Membresias">Membresias</a></li>
-                <li class="menu-option"><a class="logo-link" id="login">Login</a></li> 
+                <li class="menu-option"><a class="logo-link">Login</a></li> 
 
             <div class="menu-derecha">
                 <li class="menu-option-der">
@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li class="menu-option-der">
-                    <a href="">
+                    <a href="https://www.instagram.com/celeglutenfree/">
                         <ion-icon name="logo-instagram" id="ig"></ion-icon>
                     </a>
                 </li>
@@ -32,26 +32,25 @@
         </ul>
         <ion-icon name="grid-outline" class="nav-mobile"></ion-icon>
     </nav>
-    <div id="login-pop-up">
-        <img src="img/pepas.jpg" alt="hola si" id="img-login">
-        <div id="formulario-login">
-            <form method="post">
-                <p>E-mail:</p>
-                <input type="email" name="mail" required placeholder="Ingrese su correo electrónico"> <br>
-                <p>Contraseña:</p>
-                <input type="password" name="contrasena" required placeholder="Ingrese contraseña">
-                <div class="check">
-                    <input type="checkbox" name="recordar" class="cajita"> <label for="recordar">Recordar inicio de sesión</label>
+    <div class="backdrop">
+        <div class="modal" id="sesion-popup">
+            <div id="modal-content">
+                <div id="img-sesion">
                 </div>
-                <!--<ul>
-                    <li>Debe incluir al menos 1 número.</li>
-                    <li>Debe contener al menos 1 letra mayúscula.</li>
-                    <li>La contraseña debe incluir minimo 8 caracteres.</li>
-                </ul> -->
-                <input class="iniciar" type="submit" value="iniciarSesion"> <br>
-            </form>
+                <div id="form-sesion">
+                    <span id="close">&times;</span>
+                    <h2 id="titulo-sesion">Inicio de Sesión</h2>
+                    <form method="login.php" id="login">
+                        <input type="text" id="username" name="username" required placeholder="Ingrese email">
+                        <input type="password" id="password" name="password" required placeholder="Ingrese contraseña">
+                        <button type="submit">Iniciar Sesión</button>
+                    </form>
+                    <a href="registro.html">¿No tenes cuenta? Registrate.</a>
+                </div>
+            </div>
         </div>
     </div>
+        
     <section class="carruzel">
 
     </section>

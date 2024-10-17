@@ -26,11 +26,6 @@ navmobile.addEventListener("click", function () {
 });
 
 
-//Pop-up del login ---------------------------------------------------------------------------------------------------
-let login = document.querySelectorAll('#login');
-
-
-
 //CERRAR HAMBURGUESA POR CADA BOTON QUE SE PRESIONE ------------------------------------------------------------------
 let botonesHamburguesa = document.querySelectorAll('.logo-link');
 
@@ -44,7 +39,17 @@ botonesHamburguesa.forEach((botonHamburguesa) => {
 		}
 	});
 });
+//Pop-up del login ---------------------------------------------------------------------------------------------------
+let modal = document.querySelectorAll(".backdrop");
+let cerrar = document.getElementById("close");
 
+botonesHamburguesa[3].addEventListener("click", function () {
+	modal[0].style.visibility = "visible";
+});
+
+cerrar.addEventListener("click", function () {
+	modal[0].style.visibility = "hidden";
+});
 
 // Valida la entrada de texto en tiempo real. ------------------------------------------------------------------------
 let textointro = document.querySelectorAll('.texto-rest');
