@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Página Principal</title>
 </head>
 <body>
@@ -51,8 +51,21 @@
         </div>
     </div>
         
-    <section class="carruzel">
-
+    <section class="carousel">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="img/carruzel1.jpg">
+                <img id="slide-2" src="img/carruzel2.jpg">
+                <img id="slide-3" src="img/carruzel3.jpg">
+                <img id="slide-4" src="img/carruzel4.jpg">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+            </div>
+        </div>
     </section>
 
     <section id="Inicio" class="Inicio">
@@ -98,7 +111,8 @@
         </div>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/carouzel.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
