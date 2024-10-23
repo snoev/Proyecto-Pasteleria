@@ -331,7 +331,8 @@ form button:hover{
 
 /* carruzel */
 .carousel{
-	padding: 2rem;	
+	padding: 2rem;
+	margin-top: 5rem;	
 }
 .slider-wrapper{
 	position: relative;
