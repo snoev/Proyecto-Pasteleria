@@ -20,7 +20,7 @@
             <div class="login">
                 <div class="caja-naranja">
                     <div class="formulario">
-                        <form method="post">
+                        <form method="post" action="registro_process.php">
                             <p>Nombre completo:</p>
                             <input type="text" name="nombre" required placeholder="Ingrese su nombre"> <br>
                             <p>Apellido:</p>

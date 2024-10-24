@@ -1,0 +1,13 @@
+CREAR LA BASE DE DATOS:
+Abren el archivo "base de datos.txt", copian todo el texto de adentro y lo ponen dentro de un archivo SQL para ejecutar en su enteridad.
+SI NO SABEN HACER ESO:
+Una vez copiado todo el texto abren "MySQL Workbench 6.3 CE", le dan click a su conexión de siempre que utilizan en base de datos y cuando termina de cargar hacen "ctrl+t" (o sino hacen click arriba a la izquierda donde dice 'File' y click en 'New Query Tab'). Ahora solo pegan todo el código y lo ejecutan como hacen normalmente en base de datos (pueden usar "ctrl+enter" al final de cada linea para ejecutarla más rápido).
+UNA VEZ TERMINADA LA BASE DE DATOS:
+Agarren la carpeta donde se encuentran todos los archivos ("#Proyecto-Pasteleria") y muévanla a la carpeta 'htdocs' del XAMPP que se encuentra en: C:\xampp\htdocs\
+Una vez que hayan movido esa carpeta completamente van a abrir el GitHub Desktop (si es que aún no lo estaba) y les va a aparecer una pantalla media rara sobre que no encuentra la carpeta, hacen click en el botón medio celeste que dice "locate" y buscan la carpeta que ahora se debe de encontrar en C:\xampp\htdocs\Proyecto-Pasteleria
+
+
+SI QUIEREN EDITAR LA BASE DE DATOS:
+Pueden hacerlo a través del navegador mucho más fácil usando: 'localhost/phpmyadmin' desde ahí hacen click en la base de datos (cele_gluten_free) y van a donde dice SQL (se encuentra en la parte de arriba de la pantalla entre 'Estructura' y 'Buscar'). Ahí van a poder hacer sus consultas y cambios tranquilamente como si fuese el Workbench.
+Una vez terminada su consulta recuerden copiarla y pegarla en el archivo "base de datos.txt" para que todos tengamos la base de datos actualizada.
+Si necesitan actualizar la base de datos copian lo último que se agrego al archivo "base de datos.txt" y lo pegan en el apartado SQL del phpmyadmin como dije antes.

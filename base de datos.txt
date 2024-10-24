@@ -1,0 +1,106 @@
+create database cele_gluten_free;
+use cele_gluten_free;
+
+CREATE TABLE roles (
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  descripcion varchar(30) DEFAULT NULL
+);
+
+insert into roles (descripcion) values 
+('administrador'),
+('miembro'),
+('usuario');
+
+CREATE TABLE usuarios (
+  idUsuario int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nombre varchar(50) DEFAULT NULL,
+  apellido varchar(50) DEFAULT NULL,
+  email varchar(80) NOT NULL,
+  contra varchar(30) NOT NULL,
+  tel bigint,
+  direccion varchar (200),
+  fechaRegistro date,
+  rol int(11) DEFAULT NULL,
+  UNIQUE KEY email (email),
+  KEY rol (rol),
+  CONSTRAINT usuarios_ibfk_1 FOREIGN KEY (rol) REFERENCES roles (id)
+);
+
+insert into usuarios (nombre, apellido, email, contra, rol) values
+('Fabrizio', 'Amarilla', 'amarillafabrizio55@gmail.com','a',1),
+('Estefanía', 'Montañez', 'estefaniamontanez13@gmail.com','a',1),
+('Alan', 'Monzón', 'alanmonzon640@gmail.com','a',1),
+('Arian', 'Maidana', 'arian06m@gmail.com','a',1),
+('Lisandro', 'Genin', 'lgenin82@gmail.com','a',1),
+('Mateo','Vera', 'mateuelcapo@gmail.com','a',1);
+
+CREATE TABLE miembros (
+  idMiembro int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  usuario_id int NOT NULL,
+  fechaInicio date,
+  fechaFin date,
+  estado ENUM('Activa', 'Inactiva') NOT NULL,
+  FOREIGN KEY (usuario_id) references usuarios (idUsuario)
+);
+
+CREATE TABLE categorias(
+    idCategoria INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    descripcion TEXT
+);
+
+CREATE TABLE productos (
+    idProducto INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10, 2),
+    stock INT,
+    categoria INT,
+    imagen_url VARCHAR(255),
+    FOREIGN KEY (categoria) REFERENCES categorias(idCategoria)
+);
+
+CREATE TABLE pedidos (
+    idPedido INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT,
+    sucursal_id INT,
+    repartidor_id INT,
+    fechaPedido DATETIME,
+    estadoPedido VARCHAR(50),
+    total DECIMAL(10, 2),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(idUsuario)
+);
+
+CREATE TABLE detallesPedido (
+    idDetalle INT PRIMARY KEY AUTO_INCREMENT,
+    pedido_id INT,
+    producto_id INT,
+    cantidad INT,
+    precioUnitario DECIMAL(10, 2),
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(idPedido),
+    FOREIGN KEY (producto_id) REFERENCES productos(idProducto)
+);
+
+CREATE TABLE pagos (
+    idPago INT PRIMARY KEY AUTO_INCREMENT,
+    pedido_id INT,
+    metodoPago ENUM('Efectivo', 'Tarjeta de Crédito', 'Tarjeta de Débito') NOT NULL,
+    monto DECIMAL(10, 2),
+    fechaPago DATETIME,
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(idPedido)
+);
+
+CREATE TABLE carrito (
+    idCarrito INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(idUsuario)
+);
+
+CREATE TABLE detallesCarrito (
+    idDetalle INT PRIMARY KEY AUTO_INCREMENT,
+    carrito_id INT,
+    producto_id INT,
+    cantidad INT,
+    FOREIGN KEY (carrito_id) REFERENCES carrito(idCarrito),
+    FOREIGN KEY (producto_id) REFERENCES productos(idProducto)
+);

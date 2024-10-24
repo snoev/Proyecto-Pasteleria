@@ -22,7 +22,7 @@
 	padding: 0;
 	list-style: none;
 	font-family: 'rubik'; /* Name your font family */
-    src: url('Rubik-Regular.ttf'); 
+    src: url('Rubik-Regular.ttf');
 }
 
 html {
@@ -651,7 +651,7 @@ form button:hover{
 	}
 	.modal {
 		margin: auto;
-		width: 80%; 
+		width: max-content; 
 		height: max-content;
 		z-index: 100; 
 		left: 0;
@@ -669,7 +669,7 @@ form button:hover{
 		height: 100%;
 		z-index: 100;
 		position: fixed;
-		visibility: visible;
+		visibility: hidden;
 	}
 	#img-sesion{
 		visibility:hidden;
@@ -683,6 +683,11 @@ form button:hover{
 		background-color: white;
 		width: max-content;
 		border: none;
+		margin: 10px;
+	}
+	#login{
+		margin: 10px;
+		margin-top: 0;
 	}
 	#modal-content {
 		position: relative;
@@ -690,10 +695,12 @@ form button:hover{
 		height: 100%;
 		background-color: #fefefe;
 		border-radius: 10px;
+		display: flex;
+		justify-content: center;
 	}
 	#titulo-sesion{
 		color: orangered;
-		margin-top: 0;
+		margin-left: 5vw;
 	}
 	form{
 		display: flex;
@@ -728,19 +735,26 @@ form button:hover{
 		background-color: #86BBD8;
 		color: #fff;
 	}
-	#close{
-		position: fixed;
-		top: 0px; /* Espacio desde la parte superior */
-		right: 0px;
-		color: orangered;
-		font-size: 50px;
-		font-weight: bold;
-		margin-left: 10px;
+	#linea-top{
+		flex-direction: row;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: min-content;
 	}
 	#titulo-sesion a{
 		text-decoration: none;
 		color: orangered;
 		font-size: 18px;
+	}
+	#close{
+		position:unset;
+		color: orangered;
+		font-size: 50px;
+		font-weight: bold;
+		justify-self: right;
+		margin-left: 3vw;
+		margin-right: 2vw;
 	}
 	#close:hover,
 	#close:focus {

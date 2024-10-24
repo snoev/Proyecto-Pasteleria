@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $userlv = $_SESSION['rol'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,17 +9,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Página Principal</title>
 </head>
 <body>
     <nav id="nav-pastel" class="menu">
         <ul class="nav">
                 <li class="menu-option"><a class="logo-img" href="#Presentacion"><img src="img/logo.png" alt="logo"></a></li>
-                <li class="menu-option"><a class="logo-link" href="#Inicio">Nosotros</a></li>
-                <li class="menu-option"><a class="logo-link" href="#Compra">Comprar</a></li>
-                <li class="menu-option"><a class="logo-link" href="#Membresias">Membresias</a></li>
-                <li class="menu-option"><a class="logo-link">Login</a></li> 
+                <li class="menu-option"><a class="logo-link botones" href="#Inicio">Nosotros</a></li>
+                <li class="menu-option"><a class="logo-link botones" href="#Compra">Comprar</a></li>
+                <li class="menu-option"><a class="logo-link botones" href="#Membresias">Membresias</a></li>
+                <li class="menu-option"><a class="logo-link" id="login-boton">Login</a></li>
+                <?php if ($userlv == 3 || $userlv == 2 || $userlv == 1): ?>
+                    <style>
+                        #login-boton{
+                            visibility: hidden;
+                            width: 0;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    </style>
+                <?php endif; ?>
+                <?php if ($userlv == 1): ?>
+                <li class="menu-option"><a class="logo-link" href="administradores/control_panel.php">Panel de Control</a></li>
+                <?php endif; ?>
 
             <div class="menu-derecha">
                 <li class="menu-option-der">
@@ -38,11 +55,13 @@
                 <div id="img-sesion">
                 </div>
                 <div id="form-sesion">
-                    <span id="close">&times;</span>
-                    <h2 id="titulo-sesion">Inicio de Sesión</h2>
-                    <form method="login.php" id="login">
-                        <input type="text" id="username" name="username" required placeholder="Ingrese email">
-                        <input type="password" id="password" name="password" required placeholder="Ingrese contraseña">
+                    <div id="linea-top">
+                        <h2 id="titulo-sesion">Inicio de Sesión</h2>
+                        <span id="close">&times;</span>
+                    </div>
+                    <form method="post" action="login_process.php" id="login">
+                        <input type="text" id="username" name="usuario" required placeholder="Ingrese email">
+                        <input type="password" id="password" name="pass" required placeholder="Ingrese contraseña">
                         <button type="submit">Iniciar Sesión</button>
                     </form>
                     <a href="registro.html">¿No tenes cuenta? Registrate.</a>
@@ -111,8 +130,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/carouzel.js" defer></script>
+    <script src="js/index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
