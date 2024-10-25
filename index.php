@@ -19,14 +19,13 @@
                 <li class="menu-option"><a class="logo-link botones" href="#Inicio">Nosotros</a></li>
                 <li class="menu-option"><a class="logo-link botones" href="#Compra">Comprar</a></li>
                 <li class="menu-option"><a class="logo-link botones" href="#Membresias">Membresias</a></li>
-                <li class="menu-option"><a class="logo-link" id="login-boton">Login</a></li>
+                <li class="menu-option cosologin"><a class="logo-link" id="login-boton">Login</a></li>
                 <?php if ($userlv == 3 || $userlv == 2 || $userlv == 1): ?>
                     <style>
-                        #login-boton{
+                        .cosologin{
+                            display: none !important;
+                            opacity: 0;
                             visibility: hidden;
-                            width: 0;
-                            padding: 0;
-                            margin: 0;
                         }
                     </style>
                 <?php endif; ?>
@@ -69,7 +68,14 @@
             </div>
         </div>
     </div>
-        
+        <?php 
+            if(isset($_GET['noUsu'])){
+                echo "<script>alert('AAAAAAAAAAAAAAAAAAAAAA');</script>";
+            }
+            if(isset($_GET['badPass'])){
+                echo "<script>alert('AAAAAAAAAAAAAAAAAAAAAA');</script>";
+            }
+        ?>
     <section class="carousel">
         <div class="slider-wrapper">
             <div class="slider">

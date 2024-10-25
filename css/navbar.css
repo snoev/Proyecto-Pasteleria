@@ -9,8 +9,8 @@
     height: 100px;
     width: 100%;
     backdrop-filter: blur(20px);
-    background-color: #02223b;
-    box-shadow: 1px 2px 20px 0px rgb(7, 15, 161);
+    background-color: #cf5007;
+    box-shadow: 1px 2px 20px 0px rgb(255, 115, 0);
 }
 
 .menu ul{
@@ -39,7 +39,7 @@
 .menu li:hover:not(.cuenta){
     height: 60px; 
     width: 130px;
-    background-color: #034271;
+    background-color: #712003;
     backdrop-filter: blur(10px);
     border-radius: 10px;
 }
@@ -69,7 +69,7 @@
     padding: 10px;
 }
 .cuenta:hover{
-    background-color: rgb(30, 55, 112);
+    background-color: rgb(167, 56, 0);
     color: white;
     padding: 10px;
     backdrop-filter: blur(10px);
