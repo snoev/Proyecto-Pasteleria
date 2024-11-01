@@ -118,6 +118,10 @@ html{
     background-repeat: no-repeat;
 }
 
+#avisocontra{
+    visibility: hidden;
+}
+
 /*
 .login .formulario .check{
     display: flex;
