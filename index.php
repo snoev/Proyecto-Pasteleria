@@ -19,7 +19,7 @@
                 <li class="menu-option"><a class="logo-link botones" href="#Inicio">Nosotros</a></li>
                 <li class="menu-option"><a class="logo-link botones" href="#Compra">Comprar</a></li>
                 <li class="menu-option"><a class="logo-link botones" href="#Membresias">Membresias</a></li>
-                <li class="menu-option cosologin"><a class="logo-link" id="login-boton">Login</a></li>
+                <li class="menu-option cosologin"><a class="logo-link" id="login-boton" style="cursor: pointer;">Login</a></li>
                 <?php if ($userlv == 3 || $userlv == 2 || $userlv == 1): ?>
                     <style>
                         .cosologin{
@@ -59,21 +59,22 @@
                         <span id="close">&times;</span>
                     </div>
                     <form method="post" action="login_process.php" id="login">
-                        <input type="text" id="username" name="usuario" required placeholder="Ingrese email">
-                        <input type="password" id="password" name="pass" required placeholder="Ingrese contraseña">
+                        <input type="text" id="username" class="correo-rest" name="usuario" required placeholder="Ingrese email">
+                        <input type="password" id="password" class="texto-rest" name="pass" required placeholder="Ingrese contraseña">
                         <button type="submit">Iniciar Sesión</button>
                     </form>
-                    <a href="registro.html">¿No tenes cuenta? Registrate.</a>
+                    <a href="registro.php">¿No tenes cuenta? Registrate.</a>
                 </div>
             </div>
         </div>
     </div>
         <?php 
             if(isset($_GET['noUsu'])){
-                echo "<script>alert('AAAAAAAAAAAAAAAAAAAAAA');</script>";
+                echo "<script>alert('El usuario " . $_GET['noUsu'] . " no existe');</script>";
             }
+
             if(isset($_GET['badPass'])){
-                echo "<script>alert('AAAAAAAAAAAAAAAAAAAAAA');</script>";
+                echo "<script>alert('La contraseña es incorrecta');</script>";
             }
         ?>
     <section class="carousel">
@@ -137,6 +138,7 @@
     </footer>
 
     <script src="js/index.js"></script>
+    <script src="js/inputValidator.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
