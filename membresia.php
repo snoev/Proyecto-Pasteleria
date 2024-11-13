@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $userlv = $_SESSION['rol'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,17 +16,47 @@
     <!-- Header (nav) -->
     <nav id="nav-pastel" class="menu">
         <ul class="nav">
+<<<<<<< HEAD
             <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
             <li class="menu-option"><a class="logo-link" href="index.php#Inicio">Nosotros</a></li>
             <li class="menu-option"><a class="logo-link" href="#Compra">Comprar</a></li>
             <li class="menu-option"><a class="logo-link" href="membresia.php">Membresia</a></li>
             <li class="menu-option"><a class="logo-link" href="#">Login</a></li> 
+=======
+        <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
+            <li class="menu-option"><a class="logo-link botones" href="">Nosotros</a></li>
+            <li class="menu-option"><a class="logo-link botones" href="productos.php">Productos</a></li>
+            <li class="menu-option"><a class="logo-link botones" href="membresia.php">Membresias</a></li>
+            <li class="menu-option cosologin"><a class="logo-link" id="login-boton" style="cursor: pointer;">Login</a></li>
+
+            <?php if ($userlv == 3 || $userlv == 2 || $userlv == 1): ?>
+                    <style>
+                        .cosologin{
+                            display: none !important;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    </style>
+                <?php endif; ?>
+                <?php if ($userlv == 1): ?>
+                <li class="menu-option"><a class="logo-link" href="administradores/control_panel.php">Panel de Control</a></li>
+                <?php endif; ?>
+
+>>>>>>> 0fcc7b8169c06e81cbaed4dabcb40e26c6d1b9b1
             <div class="menu-derecha">
                 <li class="menu-option-der">
-                    <a href=""><ion-icon name="logo-facebook" id="fcb"></ion-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=61567463004675" target="_blank">
+                        <ion-icon name="logo-facebook" id="fcb"></ion-icon>
+                    </a>
                 </li>
                 <li class="menu-option-der">
+<<<<<<< HEAD
                     <a href=""><ion-icon name="logo-instagram" id="ig"></ion-icon></a>
+=======
+                    <a href="https://www.instagram.com/celeglutenfree/">
+                        <ion-icon name="logo-instagram" id="ig"></ion-icon>
+                    </a>
+>>>>>>> 0fcc7b8169c06e81cbaed4dabcb40e26c6d1b9b1
                 </li>
             </div>
         </ul>

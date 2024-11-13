@@ -15,10 +15,17 @@
 <body>
     <nav id="nav-pastel" class="menu">
         <ul class="nav">
+<<<<<<< HEAD
                 <li class="menu-option"><a class="logo-img" href="#Presentacion"><img src="img/logo.png" alt="logo"></a></li>
                 <li class="menu-option"><a class="logo-link botones" href="#Inicio">Nosotros</a></li>
                 <li class="menu-option"><a class="logo-link botones" href="#Compra">Comprar</a></li>
                 <li class="menu-option"><a class="logo-link botones" href="membresia.php">Membresia</a></li>
+=======
+                <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
+                <li class="menu-option"><a class="logo-link botones" href="">Nosotros</a></li>
+                <li class="menu-option"><a class="logo-link botones" href="productos.php">Productos</a></li>
+                <li class="menu-option"><a class="logo-link botones" href="membresia.php">Membresias</a></li>
+>>>>>>> 0fcc7b8169c06e81cbaed4dabcb40e26c6d1b9b1
                 <li class="menu-option cosologin"><a class="logo-link" id="login-boton" style="cursor: pointer;">Login</a></li>
                 <?php if ($userlv == 3 || $userlv == 2 || $userlv == 1): ?>
                     <style>
