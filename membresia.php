@@ -15,7 +15,7 @@
             <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
             <li class="menu-option"><a class="logo-link" href="index.php#Inicio">Nosotros</a></li>
             <li class="menu-option"><a class="logo-link" href="#Compra">Comprar</a></li>
-            <li class="menu-option"><a class="logo-link" href="membresia.php">Membresias</a></li>
+            <li class="menu-option"><a class="logo-link" href="membresia.php">Membresia</a></li>
             <li class="menu-option"><a class="logo-link" href="#">Login</a></li> 
             <div class="menu-derecha">
                 <li class="menu-option-der">
