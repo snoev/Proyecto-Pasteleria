@@ -104,3 +104,39 @@ CREATE TABLE detallesCarrito (
     FOREIGN KEY (carrito_id) REFERENCES carrito(idCarrito),
     FOREIGN KEY (producto_id) REFERENCES productos(idProducto)
 );
+
+INSERT INTO categorias (nombre, descripcion) VALUES 
+('Salado', 'Productos salados como panes, galletas, etc.'),
+('Dulce', 'Productos dulces como pasteles, galletas, etc.'),
+('Bebida', 'Bebidas como jugos, gaseosas, etc.');
+
+INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
+('galletas sin gluten', 'galletas de arroz sin gluten, perfectos para snacks.', 2.50, 200, 1),
+('Pan de molde sin gluten', 'Pan de molde sin gluten ideal para sándwiches.', 4.75, 120, 1),
+('Pizza base sin gluten', 'Base de pizza sin gluten, lista para usar.', 6.00, 80, 1),
+('Tostadas sin gluten', 'Tostadas crujientes hechas sin gluten.', 3.00, 150, 1),
+('Pizzetas sin gluten', 'pre pizzetas sin gluten, listas para usar', 6.00, 90, 1),
+('Pan de miga sin gluten', 'Pan de miga sin gluten para sanguchitos', 6.00, 90, 1),
+('Pan negro', 'pan negro sin gluten', 6.00, 90, 1);
+
+-- Productos dulces
+INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
+('Brownie sin gluten', 'Brownie de chocolate sin gluten, delicioso y esponjoso.', 3.50, 90, 2),
+('Magdalenas sin gluten', 'Magdalenas sin gluten con sabor a vainilla.', 4.20, 60, 2),
+('Bizcocho de zanahoria sin gluten', 'Bizcocho de zanahoria y nuez, sin gluten.', 5.00, 40, 2),
+('Galletas de chispas de chocolate sin gluten', 'Galletas con chispas de chocolate, sin gluten.', 3.80, 110, 2),
+('Alfajor sin gluten', 'alfajor bañado chocolate amargo de dulce de leche, sin gluten.', 5.00, 90, 2),
+('Medialunas sin gluten', 'Medialunas de grasa y de manteca, sin gluten', 5.00, 100, 2),
+('Alfajor de maizena', 'alfajor de maizena sin gluten', 5.00, 90, 2),
+('Churro relleno', 'churros rellenos de dulce de leche o crema pastelera sin gluten,', 5.00, 100, 2),
+('Bizcochitos', 'bizcochitos sin gluten', 3.00, 100, 2),
+('Pastelitos criollos', 'pastelitos criollos de membrillo, batata, o dulce de leche, sin gluten', 5.00, 100, 2),
+('Borrachitos', 'facturas borrachitos sin gluten', 5.00, 100, 2);
+
+
+-- Bebidas
+INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
+('Jugos de frutas sin gluten', 'Jugos de frutas sin gluten.', 1.20, 300, 3),
+('Agua mineral sin gas', 'Agua mineral sin gas, apta para celíacos.', 1.00, 500, 3),
+('Leche de almendras', 'Leche de almendras sin gluten y sin lactosa.', 2.00, 200, 3),
+('Bebida de coco', 'Bebida refrescante de coco sin gluten.', 2.50, 150, 3);
