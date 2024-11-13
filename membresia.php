@@ -31,16 +31,16 @@
 
     <!-- Subscription Section -->
     <section class="subscription-container" id="Membresias">
-        <h1>Suscripcion mensual a Cele Gluten Free</h1>
-        <p>Los planes están disponibles desde ARS$ 25000/mes. Puedes cancelar en cualquier momento.</p>
+        <h1>Suscripción mensual a Cele Gluten Free</h1>
+        <p>Puedes cancelar tu plan en cualquier momento.</p>
         <div class="subscription-options">
             <div class="subscription-plan basic">
-                <h2>Sin gluten</h2>
+                <h2>Estándar</h2>
                 <p class="price">ARS$ 30000</p>
                 <ul class="features">
-                    <li>- Recibiras una caja con nuestros productos sin gluten mensualmente dea</li>
-                    <li>- Atencion personalizada deaaa</li>
-                    <li>- La membresia es sin costo, solo abonas tu caja. dea</li>
+                    <li>- Recibiras una caja con nuestros productos sin gluten mensualmente</li>
+                    <li>- Atencion personalizada</li>
+                    <li>- La membresia es sin costo, solo abonas tu caja.</li>
                 </ul>
                 <a href="#" class="button">Suscribirse</a>
             </div>
