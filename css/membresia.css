@@ -30,6 +30,7 @@ html {
 }
 
 body {
+	background-color: #6A4FB5;
 	min-height: 100vh;
 	width: 100%;
 }
@@ -49,9 +50,8 @@ body {
 	position: fixed;
 	top: 0;
 	align-items: center;
-	z-index: 11111;
 	transition: 0.5s ease;
-	z-index: 11111111111;
+	z-index: 5;
 	justify-content: center;
 }
 .nav {
@@ -84,7 +84,6 @@ body {
 	flex-direction: row;
 	margin-left: auto;
 }
-
 .Sticky {
 	position: fixed;
 	height: 15vh;
@@ -801,15 +800,7 @@ body {
 	background-color: #ff5d2b;
 }
 
-/* Ajustes para el header y el footer */
-nav {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 1000;
-	background-color: #2C2F33;
-	padding: 10px 0;
-}
+
 
 footer {
 	background-color: #2C2F33; /* Color de fondo negro uniforme */

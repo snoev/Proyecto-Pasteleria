@@ -24,9 +24,6 @@
                 <li class="menu-option-der">
                     <a href=""><ion-icon name="logo-instagram" id="ig"></ion-icon></a>
                 </li>
-                <li class="menu-option-der">
-                    <a href=""><ion-icon name="logo-whatsapp" id="wsp"></ion-icon></a>
-                </li>
             </div>
         </ul>
         <ion-icon name="grid-outline" class="nav-mobile"></ion-icon>
