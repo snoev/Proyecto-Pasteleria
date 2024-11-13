@@ -1,3 +1,8 @@
+<?php
+        session_start();
+        require "conexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +39,12 @@
     </nav>
     
     <div class="inicio">
+    <?php
+    $sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
+                  
+    $res = mysqli_query($con, $sql); 
+    $resultado=mysqli_query($con, $sql); 
+    ?>
 
         <div class="producto">
             <div class="img-producto">

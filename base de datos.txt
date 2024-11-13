@@ -140,3 +140,31 @@ INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
 ('Agua mineral sin gas', 'Agua mineral sin gas, apta para celíacos.', 1.00, 500, 3),
 ('Leche de almendras', 'Leche de almendras sin gluten y sin lactosa.', 2.00, 200, 3),
 ('Bebida de coco', 'Bebida refrescante de coco sin gluten.', 2.50, 150, 3);
+
+select * from productos;
+
+update productos set nombre= "Sanguchito de Miga"  where idProducto = 6;
+update productos set imagen_url = "galletas.avif"  where idProducto = 1;
+update productos set imagen_url = "pan.jpg" where idProducto = 2;
+update productos set imagen_url =  "prepizza.jpg" where idProducto =3 ;
+update productos set imagen_url = "tostadas.jpg" where idProducto = 4;
+update productos set imagen_url = "pizzetas.jpg" where idProducto = 5;
+update productos set imagen_url = "sanguchito-miga.jpg" where idProducto = 6;
+update productos set imagen_url = "pan-negro.jpg" where idProducto = 7;
+update productos set imagen_url = "brownie.jpg" where idProducto = 8;
+update productos set imagen_url = "magdalenas.jpg" where idProducto = 9;
+update productos set imagen_url = "bizcochuelo.jpg" where idProducto = 10;
+update productos set imagen_url = "cookies-chips.jpeg" where idProducto = 11;
+update productos set imagen_url = "alfajor.jpeg" where idProducto = 12;
+update productos set imagen_url = "medialunas.jpg" where idProducto = 13;
+update productos set imagen_url = "alfajor-maicena.jpg" where idProducto = 14;
+update productos set imagen_url = "churros.jpg "where idProducto = 15;
+update productos set imagen_url = "bizcochitos-grasa.jpg" where idProducto = 16;
+update productos set imagen_url = "pastelitos.jpeg" where idProducto = 17;
+update productos set imagen_url = "borrachitos.jpg" where idProducto = 18;
+update productos set imagen_url = "jugo-frutas.png" where idProducto = 19;
+update productos set imagen_url = "agua.jpg" where idProducto = 20;
+update productos set imagen_url = "leche-almendras.jpg" where idProducto = 21;
+update productos set imagen_url = "leche-coco.png" where idProducto = 22;
+#update productos set imagen_url = "" where idProducto = 23;
+
