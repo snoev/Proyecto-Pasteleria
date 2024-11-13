@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $userlv = $_SESSION['rol'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +15,39 @@
 <body>
     
     <nav id="nav-pastel" class="menu">
-            <ul class="nav">
-                    <li class="menu-option"><a class="logo-img" href="#Presentacion"><img src="img/logo.png" alt="logo"></a></li>
-                    <li class="menu-option"><a class="logo-link botones" href="#Inicio">Nosotros</a></li>
-                    <li class="menu-option"><a class="logo-link botones" href="#Compra">Comprar</a></li>
-                    <li class="menu-option"><a class="logo-link botones" href="#Membresias">Membresias</a></li>
-                    <li class="menu-option"><a class="logo-link" id="login-boton">Login</a></li>
-                <div class="menu-derecha">
-                    <li class="menu-option-der">
-                        <a href="https://www.facebook.com/profile.php?id=61567463004675" target="_blank">
-                            <ion-icon name="logo-facebook" id="fcb"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="menu-option-der">
-                        <a href="https://www.instagram.com/celeglutenfree/">
-                            <ion-icon name="logo-instagram" id="ig"></ion-icon>
-                        </a>
-                    </li>
-                </div>
-            </ul>
-            <ion-icon name="grid-outline" class="nav-mobile"></ion-icon>
+        <ul class="nav">
+         <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
+                <li class="menu-option"><a class="logo-link botones" href="">Nosotros</a></li>
+                <li class="menu-option"><a class="logo-link botones" href="productos.php">Productos</a></li>
+                <li class="menu-option"><a class="logo-link botones" href="membresia.php">Membresias</a></li>
+                <li class="menu-option cosologin"><a class="logo-link" id="login-boton" style="cursor: pointer;">Login</a></li>
+                <?php if ($userlv == 3 || $userlv == 2 || $userlv == 1): ?>
+                    <style>
+                        .cosologin{
+                            display: none !important;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    </style>
+                <?php endif; ?>
+                <?php if ($userlv == 1): ?>
+                <li class="menu-option"><a class="logo-link" href="administradores/control_panel.php">Panel de Control</a></li>
+                <?php endif; ?>
+
+            <div class="menu-derecha">
+                <li class="menu-option-der">
+                    <a href="https://www.facebook.com/profile.php?id=61567463004675" target="_blank">
+                        <ion-icon name="logo-facebook" id="fcb"></ion-icon>
+                    </a>
+                </li>
+                <li class="menu-option-der">
+                    <a href="https://www.instagram.com/celeglutenfree/">
+                        <ion-icon name="logo-instagram" id="ig"></ion-icon>
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <ion-icon name="grid-outline" class="nav-mobile"></ion-icon>
     </nav>
     
     <div class="inicio">
