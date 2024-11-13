@@ -105,10 +105,10 @@
     </section>
     <section id="Compra" class="Compra">
 
-    </section>
-    <section id="Membresias" class="Membresias">
-
-    </section>
+        </section>
+        <section id="Membresias" class="Membresias">
+            
+        </section>
     </section>
 
     <footer>
