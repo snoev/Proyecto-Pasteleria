@@ -2,7 +2,6 @@
     session_start();
     $userlv = $_SESSION['rol'] ?? '';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +10,7 @@
     <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/productos.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -81,45 +81,46 @@
         ?>
     
     <div class="inicio">
-
-    <section id="Compra" class="Compra">
-        <?php
-        require_once "conexion.php";
-        $conn = conectar();
-        $sql = "SELECT idProducto,nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
-        ?>
-
-        <div class="cards">
-            <?php
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "
-                        <a class='card' href='producto.php?id=".$row['idProducto']."'>
-                            <div class='content'>
-                                <img src='img/". $row['imagen_url'] ."'>
-                                <p>".$row['nombre']."</p>
-                            </div>
-                            <div class='c_foot'>
-                                <button class='btn' ><i class='fa-solid fa-cart-plus' style='color: #b3480e;'></i></button>
-                            </div>
-                        </a>";
-                }
-            }
-            ?>
-        </div>
-        
-    </section>
     <?php
-    // Recuperar el valor del producto desde la URL
-    $idProducto = isset($_GET['id']) ? intval($_GET['id']) : 0;
+    require_once "conexion.php";
+    $conn = conectar();
+    
+    // Verificar si el parámetro 'id' está presente en la URL
+    if (isset($_GET['id'])) {
+        // Recuperar el valor de 'id' y convertirlo a entero por seguridad
+        $idProducto = intval($_GET['id']);
+        $sql = "SELECT p.*, c.nombre AS 'categoria_nombre'
+                FROM productos AS p
+                JOIN categorias AS c
+                ON p.categoria = c.idCategoria
+                WHERE p.idProducto = $idProducto;";
 
-    // Mostrar el valor recuperado (para pruebas)
-    echo "ID del producto seleccionado: " . $idProducto;
+        $result = $conn->query($sql);
+                
+        $row = $result->fetch_assoc();
 
-    // Aquí puedes usar `$idProducto` para hacer consultas a la base de datos o cualquier otra acción
+        // Mostrar el valor recuperado
+        echo "
+            <ul>
+                <li><img src='img/".$row['imagen_url']."'></li>
+                <li> nombre:".$row['nombre']."</p></li>
+                <li> idProducto:".$row['idProducto']."</p></li>
+                <li> descripcion:".$row['descripcion']."</p></li>
+                <li> precio:".$row['precio']."</p></li>
+                <li> stock:".$row['stock']."</p></li>
+                <li> categoria:".$row['categoria_nombre']."</p></li>
+            </ul>
+        ";
+
+    } else {
+        // Si no se envió el parámetro 'id', mostrar un mensaje
+        echo "<h1>Error</h1>";
+        echo "<p>No se especificó un producto.</p>";
+    }
     ?>
 
+
+    </div>
 
     <footer>
         <div class="footer">
