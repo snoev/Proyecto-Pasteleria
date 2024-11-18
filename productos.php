@@ -1,6 +1,7 @@
 <?php
     session_start();
     $userlv = $_SESSION['rol'] ?? '';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/productos.css">
-    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     
@@ -83,9 +83,12 @@
     <div class="inicio">
     <?php
     $sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
-                  
-    $res = mysqli_query($con, $sql); 
-    $resultado=mysqli_query($con, $sql); 
+    require "conexion.php";
+    $conn = conectar();
+    
+
+    $res = mysqli_query($conn, $sql); 
+    $resultado=mysqli_query($conn, $sql); 
     ?>
 
         <div class="producto">
@@ -96,7 +99,12 @@
                     N_PROD
                 </div>
                 <div class="descripcion">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel praesentium adipisci necessitatibus sapiente. Iste repellat error ex, provident dolorem inventore id, delectus sequi ratione quaerat temporibus quod praesentium deserunt pariatur, numquam nulla consequuntur alias maiores impedit deleniti nihil autem. :)</p>
+                    <p>
+                    <?php
+                      while($registro=mysqli_fetch_assoc($resultado)){}
+                       // $registro['nombre'];
+                    ?>
+                    </p>
                 </div>
                 <div class="compra">
                     Precio $200
@@ -105,7 +113,31 @@
             </div>
         </div>
 
+    <div class="masProd">
+        <h1>Productos Relacionados</h1>
+        <div class="carrusel">
+            <div class="carrusel-images">
+                <?php
+                // Ejecutamos la consulta para obtener los productos
+                $sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url FROM productos;";
+                $res = mysqli_query($conn, $sql);
+
+                // Mostrar cada imagen del producto en el carrusel
+                while ($registro = mysqli_fetch_assoc($res)) {
+                    ?>
+                    <div class="carrusel-item">
+                        <img src="img/<?= $registro['imagen_url']; ?>" alt="<?= $registro['nombre']; ?>" class="carrusel-img">
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+            <button class="carrusel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carrusel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
     </div>
+
+
 
     <footer>
         <div class="footer">
@@ -132,6 +164,6 @@
             <p>&copy; 2024 Cele Gluten Free. All rights reserved.</p>
         </div>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="js/masprod.js"></script>
 </body>
 </html>
