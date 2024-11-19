@@ -84,96 +84,50 @@
         ?>
     
     <div class="inicio">
-
-    <section id="Compra" class="Compra">
-        <?php
-        require_once "conexion.php";
-        $conn = conectar();
-        $sql = "SELECT idProducto,nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
-        ?>
-
-        <div class="cards">
+        <section id="Compra" class="Compra">
             <?php
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "
-                        <a class='card' href='producto.php?id=".$row['idProducto']."'>
-                            <div class='content'>
-                                <img src='img/". $row['imagen_url'] ."'>
-                                <p>".$row['nombre']."</p>
-                            </div>
-                            <div class='c_foot'>
-                                <button class='btn' ><i class='fa-solid fa-cart-plus' style='color: #b3480e;'></i></button>
-                            </div>
-                        </a>";
-                }
-            }
+            require_once "conexion.php";
+            $conn = conectar();
+            $sql = "SELECT idProducto,nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
             ?>
-        </div>
-        
-    </section>
-    <?php
-    $sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
-    require "conexion.php";
-    $conn = conectar();
-    
 
-    $res = mysqli_query($conn, $sql); 
-    $resultado=mysqli_query($conn, $sql); 
-    ?>
-
-        <div class="producto">
-            <div class="img-producto">
-            </div>
-            <div class="detalle">
-                <div class="titulo">
-                    N_PROD
-                </div>
-                <div class="descripcion">
-                    <p>
-                    <?php
-                      while($registro=mysqli_fetch_assoc($resultado)){}
-                       // $registro['nombre'];
-                    ?>
-                    </p>
-                </div>
-                <div class="compra">
-                    Precio $200
-                    <button>comprar</button>
-                </div>
-            </div>
-        </div>
-
-    <div class="masProd">
-        <h1>Productos Relacionados</h1>
-        <div class="carrusel">
-            <div class="carrusel-images">
+            <div class="cards">
                 <?php
-                // Ejecutamos la consulta para obtener los productos
-                $sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url FROM productos;";
-                $res = mysqli_query($conn, $sql);
-
-                // Mostrar cada imagen del producto en el carrusel
-                while ($registro = mysqli_fetch_assoc($res)) {
-                    ?>
-                    <div class="carrusel-item">
-                        <img src="img/<?= $registro['imagen_url']; ?>" alt="<?= $registro['nombre']; ?>" class="carrusel-img">
-                    </div>
-                    <?php
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                        <div class="card">
+                            <a href="producto.php?id=<?= $row['idProducto']; ?>">
+                                <img src="img/<?= $row['imagen_url']; ?>" alt="<?= $row['nombre']; ?>" class="card-img">
+                            </a>
+                            <p><?= $row['nombre']; ?></p>
+                            <button class="btn">
+                                <i class="fa-solid fa-cart-plus" style="color: #b3480e;"></i>
+                            </button>
+                        </div>
+                        <?php
+                    }
                 }
                 ?>
             </div>
-            <button class="carrusel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carrusel-btn next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
+            
+        </section>
     </div>
+    //<?php
+    //$sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
+//
+    //$res = mysqli_query($conn, $sql); 
+    //$resultado=mysqli_query($conn, $sql); 
+    //?>
+
+
 <?php
     // Recuperar el valor del producto desde la URL
     $idProducto = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
     // Mostrar el valor recuperado (para pruebas)
-    echo "ID del producto seleccionado: " . $idProducto;
+    //echo "ID del producto seleccionado: " . $idProducto;
 
     // Aquí puedes usar `$idProducto` para hacer consultas a la base de datos o cualquier otra acción
     ?>
@@ -205,6 +159,7 @@
             <p>&copy; 2024 Cele Gluten Free. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="js/masprod.js"></script>
 </body>
 </html>

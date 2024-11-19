@@ -10,8 +10,8 @@
     <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/productos.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/producto.css">
+
 </head>
 <body>
     
@@ -98,19 +98,39 @@
         $result = $conn->query($sql);
                 
         $row = $result->fetch_assoc();
-
+        ?>
+        <div class="producto">
+            <div class="img-producto">
+                <?php echo "<img src='img/".$row['imagen_url']."'>"; ?>
+            </div>
+            <div class="detalle">
+                <div class="titulo">
+                    <h1><?php echo " ".$row['nombre']."</p>"; ?></h1>
+                </div>
+                <div class="descripcion">
+                    <?php echo "ID Producto:".$row['idProducto']."</p> <br>"; ?>
+                    <?php echo "Descripcion: ".$row['descripcion']."</p> <br>";  ?>
+                    <?php echo "Stock: ".$row['stock']."</p>"; ?>
+                </div>
+                <div class="compra">
+                    <?php echo "precio:".$row['precio']."</p>"; ?>
+                    <button>Comprar</button>
+                </div>
+                </div>
+        </div>
+<?php
         // Mostrar el valor recuperado
-        echo "
-            <ul>
-                <li><img src='img/".$row['imagen_url']."'></li>
-                <li> nombre:".$row['nombre']."</p></li>
-                <li> idProducto:".$row['idProducto']."</p></li>
-                <li> descripcion:".$row['descripcion']."</p></li>
-                <li> precio:".$row['precio']."</p></li>
-                <li> stock:".$row['stock']."</p></li>
-                <li> categoria:".$row['categoria_nombre']."</p></li>
-            </ul>
-        ";
+       // echo "
+       //     <ul>
+       //         <li><img src='img/".$row['imagen_url']."'></li>
+       //         <li> nombre:".$row['nombre']."</p></li>
+       //         <li> idProducto:".$row['idProducto']."</p></li>
+       //         <li> descripcion:".$row['descripcion']."</p></li>
+       //         <li> precio:".$row['precio']."</p></li>
+       //         <li> stock:".$row['stock']."</p></li>
+       //         <li> categoria:".$row['categoria_nombre']."</p></li>
+       //     </ul>
+       // ";
 
     } else {
         // Si no se envió el parámetro 'id', mostrar un mensaje
@@ -119,6 +139,29 @@
     }
     ?>
 
+<div class="masProd">
+        <h1>Productos Relacionados</h1>
+        <div class="carrusel">
+            <div class="carrusel-images">
+                <?php
+                // Ejecutamos la consulta para obtener los productos
+                $sql = "SELECT nombre, descripcion, precio, stock, categoria, imagen_url FROM productos;";
+                $res = mysqli_query($conn, $sql);
+
+                // Mostrar cada imagen del producto en el carrusel
+                while ($registro = mysqli_fetch_assoc($res)) {
+                    ?>
+                    <div class="carrusel-item">
+                        <img src="img/<?= $registro['imagen_url']; ?>" alt="<?= $registro['nombre']; ?>" class="carrusel-img">
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+            <button class="carrusel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carrusel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
 
     </div>
 
@@ -127,7 +170,7 @@
             <div class="footer-section">
                 <img class="img-foot" src="img/banner.png">
                
-            </div>
+          </div>
             <div class="footer-section">
                 <h4 class="linea">Acceso rapido</h4>
                 <p><a href="#Inicio">Inicio</a></p>
