@@ -768,3 +768,108 @@ form button:hover{
 		text-align: center;
 	}
 }
+@import url(https://fonts.google.com/specimen/Poppins);
+.font-style-title {font-family:'Poppins', sans-serif !important; } 
+.font-style-subtitle {font-family: 'Poppins', sans-serif !important; } 
+.font-style-heading {font-family: 'Poppins', sans-serif !important; } 
+.font-style-normalText {font-family: 'Poppins', sans-serif !important; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf4e3;
+  text-align: center;
+  color: #4b3621;
+}
+.imagen-container {
+	display: flex;
+	justify-content: space-between;
+}
+.imagen-container img {
+	width: 30%; 
+	height: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.image {
+  margin: 20px 0;
+  width: 200px;
+  height: auto;
+}
+
+.line {
+  width: 80%;
+  height: 2px;
+  background-color: #F26419;
+  margin: 20px auto;
+}
+.linechica {
+  width: 60%;
+  height: 2px;
+  background-color: #F26419;
+  margin: 20px auto;
+}
+.container {
+  padding: 20px;
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.info {
+  max-width: 400px;
+  padding: 20px;
+  text-align: left;
+}
+
+.info h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.info a {
+  color: #F26419;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.map {
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  margin: 20px;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+
+h1, h2 {
+  margin: 0 0 20px 0;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
