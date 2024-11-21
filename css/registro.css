@@ -20,9 +20,6 @@ html{
     height: 100vh;
 }
 .container .login{
-    /*display: flex;
-    justify-content: end;
-    align-items: end; */
     
     width: 40%;
     height: 100vh;
@@ -36,8 +33,6 @@ html{
     align-items: center;
     justify-content: center;
     padding-left: 0;
-/*    border-radius: 10px;
-    border: 2px solid black ; */
     color: white;
 }
 .formulario{
@@ -64,8 +59,6 @@ html{
     margin: 8px;
     margin-left: 0;
     border: none;
-    /*border: 1px solid black;
-    background-color:#86BBD8; */
     box-shadow: none;
     outline: none;
     
@@ -90,7 +83,6 @@ html{
     cursor: pointer;
 }
 .login .iniciar{
-/*    margin-top: 10vh; */
     background-color: #F6AE2D;
 
 }
@@ -121,18 +113,3 @@ html{
 #avisocontra{
     visibility: hidden;
 }
-
-/*
-.login .formulario .check{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-
-}
-.login .formulario .cajita{
-    width: 15px;
-    height: 15px;
-}
-
-*/ 

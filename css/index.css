@@ -35,137 +35,7 @@ body {
 }
 
 /* MENU NAVBAR */
-#nav-pastel {
-	display: flex;
-	justify-content: space-between; /* Separa los elementos a ambos lados */
-	align-items: center;
-	background-color: var(--primary);
-}
 
-.menu {
-	width: 100%;
-	height: 15vh;
-	display: flex;
-	position: fixed;
-	top: 0;
-	align-items: center;
-	transition: 0.5s ease;
-	z-index: 5;
-	justify-content: center;
-}
-.nav {
-	display: flex;
-	justify-content: flex-start; /* Alinea los elementos del menú a la izquierda */
-	align-items: center;
-	width: 100%;
-}
-.logo-img img{
-	filter: drop-shadow(0px 0px 3px black);
-}
-.menu-option-der:first-child {
-	margin-left: auto;
-	right: 0;
-}
-
-.menu-option-der {
-	display: flex;
-}
-.menu-option-der ion-icon {
-	font-size: 2rem;
-	padding: 0 0.5rem;
-}
-.menu-option-der:last-child ion-icon {
-	padding: 0 0 0 0.5rem;
-}
-.menu-derecha {
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: row;
-	margin-left: auto;
-}
-
-.Sticky {
-	position: fixed;
-	height: 15vh;
-	top: 0;
-	display: flex;
-	align-items: center;
-	z-index: 5;
-	transition: 1s ease;
-	background-color: #F26419;
-	/* -webkit-filter: invert(100%); */
-    /* filter: invert(100%); */
-	/* mix-blend-mode: difference; */
-}
-
-.Sticky .logo-link {
-	color: #ffffff;
-}
-
-.menu ul {
-	display: flex;
-	padding: 40px;
-	gap: 30px;
-	top: 0;
-	position: relative;
-	list-style: none;
-	z-index: 1;
-	transition: 1s;
-	animation: aparecer-menu 1s;
-}
-
-.menu li {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.menu a {
-	display: flex;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: 600;
-	text-decoration: none;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	font-size: 20px;
-	color: rgb(255, 255, 255);
-	z-index: 1;
-}
-
-.menu .menu-option {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-
-.menu .logo-link::before {
-	content: "";
-	display: block;
-	height: 3px;
-	width: 0%;
-	margin-top: 30px;
-	padding: 0;
-	position: absolute;
-	background-color: rgb(255, 255, 255);
-	z-index: 3;
-	transition: 1s;
-}
-
-.Sticky .logo-link::before {
-	background-color: white;
-}
-
-.menu .logo-link:hover:before {
-	width: 100%;
-	z-index: 2;
-}
-
-.menu a img {
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-}
 
 .nav-mobile {
 	color: #eee;
@@ -269,7 +139,8 @@ form input{
     height: 7vh;
     margin: 5px;
     padding: 5px;
-    margin-top: 15px;    border-radius: 15px;
+    margin-top: 15px;    
+	border-radius: 15px;
     border: 2px solid orangered;
     border-radius: 10px;
     text-align: center;
@@ -390,6 +261,7 @@ form button:hover{
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples filas */
     gap: 10px; /* Espacio entre las tarjetas */
     justify-content: center; /* Centra las tarjetas si hay espacio adicional */
+	margin-top: 100px; /* Ajuste para que no se superponga con el header */
 }
 
 .card {
@@ -486,80 +358,6 @@ form button:hover{
 	visibility: visible;
 }
 
-/* footer {
-	max-height: 100px;
-	max-width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	padding: 50px 50px;
-	background-color: var(--secondary);
-	z-index: 1;
-} */
-/* ARIAN FOOTER */
-.img-foot{
-    width: 302px;
-    height: 67px;
-}
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 40px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.footer-section {
-    flex: 1 1 200px;
-    margin: 20px;
-    text-align: center;
-}
-.footer h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.footer a {
-    color: #aaa;
-    text-decoration: none;
-}
-.footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-.social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 20px;
-}
-.social-icons a:hover {
-    color: #aaa;
-}
-.footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #111;
-}
-.footer-bottom p {
-    margin: 0;
-    color: #bbb;
-}
- .linea{
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(170, 170, 170); 
-}
- /* Responsive Design */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* ARIAN FOOTER */
-
 .displaynone{
 	transform: scale(0);
 	transition: all 0.5s ease-in-out;
@@ -580,18 +378,10 @@ form button:hover{
 
 	.Sticky {
 		height: 12vh;
-		/* background-color: rgba(255, 255, 255, 0.4); */
 		background: none;
-		/* border-bottom: 1px solid #fff; */
 	}
 
 	.Inicio{
-		/* all: unset;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		position: relative; */
-		/* background-color: darkorange; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -814,109 +604,4 @@ form button:hover{
 		margin: 10px;
 		text-align: center;
 	}
-}
-@import url(https://fonts.google.com/specimen/Poppins);
-.font-style-title {font-family:'Poppins', sans-serif !important; } 
-.font-style-subtitle {font-family: 'Poppins', sans-serif !important; } 
-.font-style-heading {font-family: 'Poppins', sans-serif !important; } 
-.font-style-normalText {font-family: 'Poppins', sans-serif !important; }
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fdf4e3;
-  text-align: center;
-  color: #4b3621;
-}
-.imagen-container {
-	display: flex;
-	justify-content: space-between;
-}
-.imagen-container img {
-	width: 30%; 
-	height: auto;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.image {
-  margin: 20px 0;
-  width: 200px;
-  height: auto;
-}
-
-.line {
-  width: 80%;
-  height: 2px;
-  background-color: #F26419;
-  margin: 20px auto;
-}
-.linechica {
-  width: 60%;
-  height: 2px;
-  background-color: #F26419;
-  margin: 20px auto;
-}
-.container {
-  padding: 20px;
-}
-
-.cont {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-.info {
-  max-width: 400px;
-  padding: 20px;
-  text-align: left;
-}
-
-.info h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.info p {
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-.info a {
-  color: #F26419;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.info a:hover {
-  text-decoration: underline;
-}
-
-.map {
-  max-width: 600px;
-  width: 100%;
-  height: 400px;
-  margin: 20px;
-}
-
-.highlight {
-  font-weight: bold;
-}
-
-
-h1, h2 {
-  margin: 0 0 20px 0;
-}
-
-p {
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-  line-height: 1.6;
 }
