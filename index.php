@@ -1,33 +1,42 @@
 <?php
+     // Inicio de la sesión para gestionar datos del usuario
     session_start();
+    // Obtención del nivel de rol del usuario desde la sesión, o asignación de un valor vacío si no está definido
     $userlv = $_SESSION['rol'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividad en dispositivos -->
+
+     <!-- Importación de estilos y fuentes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/nosotros.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon"> <!-- Icono del navegador -->
+    <link rel="stylesheet" href="css/nosotros.css"> <!-- Estilos personalizados para la sección "Nosotros" -->
+    <link rel="stylesheet" href="css/index.css"> <!-- Estilos generales de la página principal -->
+    
+    <!-- Título de la página -->
     <title>Página Principal</title>
 </head>
 <body>
+    <!-- Inclusión de un archivo PHP externo para la barra de navegación -->
     <?php
         require_once 'assets/indexnavbar.php';
     ?> 
-    
+    <!-- Sección del carrusel de imágenes -->
     <section class="carousel">
         <div class="slider-wrapper">
             <div class="slider">
+                 <!-- Imágenes que forman parte del carrusel -->
                 <img id="slide-1" src="img/carruzel1.jpg">
                 <img id="slide-2" src="img/carruzel2.jpg">
                 <img id="slide-3" src="img/carruzel3.jpg">
                 <img id="slide-4" src="img/carruzel4.jpg">
-                
             </div>
+             <!-- Navegación del carrusel con enlaces hacia las distintas imágenes -->
             <div class="slider-nav">
                 <a href="#slide-1"></a>
                 <a href="#slide-2"></a>
@@ -93,11 +102,11 @@
             </iframe>
             </div>
     </section>
-
+    <!-- Inclusión del pie de página desde un archivo externo -->
     <?php
         require_once 'assets/footer.php';
     ?>
-
+     <!-- Inclusión del archivo JavaScript que controla el carrusel -->
     <script src="js/carrusel.js"></script>
 </body>
 </html>
