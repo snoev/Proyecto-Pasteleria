@@ -26,7 +26,7 @@
                 </style>
             <?php endif; ?>
             <?php if ($userlv == 1): ?>
-            <li class="menu-option"><a class="logo-link" href="administradores/control_panel.php">Panel de Control</a></li>
+            <li class="menu-option"><a class="logo-link" href="control_panel.php">Panel de Control</a></li>
             <?php endif; ?>
             <?php if ($userlv == 2 || $userlv == 3): ?>
             <span class="espacio"></span>
@@ -78,6 +78,8 @@
                 echo "<script>alert('La contraseña es incorrecta');</script>";
             }
         ?>
+    <script src="js/index.js"></script>
+    <script src="js/inputValidator.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

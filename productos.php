@@ -21,17 +21,23 @@
     ?> 
     
     <div class="inicio">
+        <!-- section base -->
         <section id="Compra" class="Compra">
+            <!-- conexión a la base de datos con una consulta para conetactar a la tabla productos -->
             <?php
             require_once "conexion.php";
             $conn = conectar();
             $sql = "SELECT idProducto,nombre, descripcion, precio, stock, categoria, imagen_url from productos;";
             ?>
 
+            <!-- section para las cards de productos -->
             <div class="cards">
                 <?php
+                /* conecta la consulta realizada previamente */
                 $result = $conn->query($sql);
+                /* revisa si hay filas afectadas */
                 if ($result->num_rows > 0) {
+                    /* por cada fila afectada efectua la devolucion de sus datos de forma prolija */
                     while ($row = $result->fetch_assoc()) {
                         ?>
                         <div class="card">
@@ -57,8 +63,6 @@
 
     // Mostrar el valor recuperado (para pruebas)
     //echo "ID del producto seleccionado: " . $idProducto;
-
-    // Aquí puedes usar `$idProducto` para hacer consultas a la base de datos o cualquier otra acción
     ?>
 
     <?php

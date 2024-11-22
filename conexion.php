@@ -1,4 +1,5 @@
 <?php
+//variables para base de datos
 $serv="localhost";
 $usuBD="root";
 $contraBD="";

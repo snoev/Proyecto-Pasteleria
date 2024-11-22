@@ -13,8 +13,8 @@
         <!-- Importación de estilos y fuentes -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!-- Iconos de Font Awesome -->
         <link rel="icon" href="img/logo.png" type="image/x-icon"> <!-- Icono del navegador -->
-        <link rel="stylesheet" href="css/index.css">
-        <title>Página Principal</title><!-- Estilos generales de la página principal -->
+        <link rel="stylesheet" href="css/index.css"><!-- Estilos generales de la página principal -->
+        <title>Página Principal</title>
     </head>
     <body>
         <?php
