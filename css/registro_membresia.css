@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100vh;
+    background-color:#F26419;
+}
+
+.container{
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    font-family: "Rubik", sans-serif;
+}
+#atras{
+    position: fixed;
+    height: max-content;
+    margin: 10px;
+}
+.contenido{
+    width: 60%;
+    height: 100%;
+}
+.container .login{
+    width: 100%;
+    height: 100vh;
+}
+.login .caja-naranja{
+    height: 100%;
+    width: 100%;
+    background-color: #F26419;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    color: white;
+}
+.formulario{
+    text-align: center;
+}
+
+.login form {
+    background: none;
+    box-shadow: none;
+    outline: none;
+    bottom: unset;
+    padding: 5px;
+   
+}
+
+.login input{
+    width: 80%;
+    height: 7vh;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px;
+    margin-left: 0;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    
+}
+
+#en-fila{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto !important;
+}
+
+.objetos-juntos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login .caja-naranja a{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    color: inherit; 
+}
+.login input:hover{
+    cursor: pointer;
+}
+
+.login .iniciar :hover{
+    background-color: #86BBD8;
+    border: none;
+}
+.login .caja-naranja a:hover{
+    color: black;
+    cursor: pointer;
+}
+.login .iniciar{
+    background-color: #F6AE2D;
+}
+
+.container .volver{
+    margin: 5px;
+    all: unset;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+.volver :hover{
+    color: #F26419;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#avisocontra{
+    visibility: hidden;
+}

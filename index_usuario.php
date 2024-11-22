@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $userlv = $_SESSION['rol'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -7,17 +8,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <title>Panel de Control</title>
-    <link rel="stylesheet" href="../css/control_panel.css">
+    <title>Página usuarios</title>
+    <link rel="stylesheet" href="css/index_usuario.css">
 </head>
 <?php
-    if(isset($_SESSION['nombre']) && $_SESSION['rol'] == 1){
+    if(isset($_SESSION['nombre']) && $userlv == 1){
         require_once 'navbar.php';
+    }
+    if(isset($_SESSION['nombre']) && $userlv == 3 || $userlv == 2){
+        require_once 'assets/indexnavbar.php';
     }
 ?>
 <body class="admin">
     <?php
-    if(!isset($_SESSION['nombre']) || $_SESSION['rol'] != 1){
+    if(!isset($_SESSION['nombre']) || $_SESSION['rol'] != 3 && $_SESSION['rol'] != 2 && $_SESSION['rol'] != 1){
         echo "ACCESO NO AUTORIZADO";
         exit();
     }

@@ -1,9 +1,15 @@
 .subscription-container {
-	background: linear-gradient(to bottom, #6A4FB5, #9179E5);
+	background: linear-gradient(to bottom, #321386, #904bff);
 	text-align: center;
 	padding: 50px 0;
 	color: white;
 	margin-top: 100px; /* Ajuste para que no se superponga con el header */
+}
+
+@media only screen and (max-width: 669px) {
+	.subscription-container {
+		margin-top: 0; /* Ajuste para que no se superponga con el header */
+	}
 }
 
 .subscription-container h1 {
@@ -43,7 +49,7 @@
 }
 
 .button {
-	background-color: #7289DA;
+	background-color: #506ac8;
 	color: white;
 	padding: 10px 20px;
 	text-decoration: none;
@@ -62,9 +68,5 @@
 }
 
 .subscription-plan.basic {
-	background-color: #ff912a;
-}
-
-.subscription-plan.premium {
-	background-color: #ff5d2b;
+	background-color: #ee7300;
 }

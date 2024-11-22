@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/indexnavbar.css">
-    <title>Document</title>
 </head>
 <body>
-<nav id="nav-pastel" class="menu">
+    <nav id="nav-pastel" class="menu">
         <ul class="nav">
             <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
-            <li class="menu-option"><a class="logo-link botones" href="index.php?#nosotros">Nosotros</a></li>
+            <li class="menu-option"><a class="logo-link botones" href="index.php#Nosotros">Nosotros</a></li>
             <li class="menu-option"><a class="logo-link botones" href="productos.php">Productos</a></li>
             <li class="menu-option"><a class="logo-link botones" href="membresia.php">Membresias</a></li>
             <li class="menu-option cosologin"><a class="logo-link" id="login-boton" style="cursor: pointer;">Login</a></li>
@@ -28,6 +27,11 @@
             <?php endif; ?>
             <?php if ($userlv == 1): ?>
             <li class="menu-option"><a class="logo-link" href="administradores/control_panel.php">Panel de Control</a></li>
+            <?php endif; ?>
+            <?php if ($userlv == 2 || $userlv == 3): ?>
+            <span class="espacio"></span>
+            <a class="cuenta" href="index_usuario.php"><ion-icon name="person" class="log-svg"></ion-icon></a>
+            <a id="logoutnavbar" href="logout.php"><ion-icon name="log-out-outline" class="log-svg"></ion-icon></a>
             <?php endif; ?>
 
             <div class="menu-derecha">
@@ -74,9 +78,6 @@
                 echo "<script>alert('La contraseña es incorrecta');</script>";
             }
         ?>
-        
-    <script src="js/index.js"></script>
-    <script src="js/inputValidator.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

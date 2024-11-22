@@ -32,15 +32,15 @@
                                 <input type="checkbox" name="recordar" class="cajita"> <p>Recordar inicio de sesión</p>
                             </div> -->
                             <p>Contraseña:</p>
-                            <input type="password" class="texto-rest" id="contraseña1" required placeholder="Ingrese contraseña">
+                            <input type="password" class="correo-rest" id="contraseña1" required placeholder="Ingrese contraseña">
                             <!--<ul>
                                 <li>Debe incluir al menos 1 número.</li>
                                 <li>Debe contener al menos 1 letra mayúscula.</li>
                                 <li>La contraseña debe incluir minimo 8 caracteres.</li>
                             </ul> -->
-                            <input type="password" class="texto-rest" id="contraseña2" required placeholder="Vuelva a ingresar la contraseña">
+                            <input type="password" class="correo-rest" id="contraseña2" required placeholder="Vuelva a ingresar la contraseña">
 
-                            <input type="hidden" class="texto-rest" name="contrasena" id="contraseña" required>
+                            <input type="hidden" class="correo-rest" name="contrasena" id="contraseña" required>
                             <input class="iniciar" type="submit" id="subir" value="Registrarse"><br>
                             <span id="avisocontra">*Las contraseñas no son iguales en ambos campos</span>
                         </form>

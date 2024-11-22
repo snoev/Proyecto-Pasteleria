@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/membresia.css">
-    <link rel="stylesheet" href="css/index.css">
     <title>Página Principal</title>
 </head>
 <body>
@@ -31,7 +30,7 @@
                     <li>- Atencion personalizada</li>
                     <li>- La membresia es sin costo, solo abonas tu caja.</li>
                 </ul>
-                <a href="#" class="button">Suscribirse</a>
+                <a href="registro_membresia.php" class="button">Suscribirse</a>
             </div>
 
         </div>
