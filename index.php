@@ -18,35 +18,57 @@
     </head>
     <body>
         <?php
+            //Código para verificar la membresia
             if(isset($_POST['idUsuario'])){
-                $mostrarMensaje = True;
-                date_default_timezone_set('America/Argentina/Buenos_Aires');
-                $fechaHoy = date('Y/m/d', time());
-                $id = $_POST['idUsuario'];
-        
                 require_once "conexion.php";
-                $conn = conectar();
-        
-                if ($conn->connect_error) {
-                    die("Error de conexión: " . $conn->connect_error);
+                $con=conectar();
+                $id = $_POST['idUsuario']; //Guardo el dato del id de usuario traido por post en la variable id
+                $sql="select contra from usuarios where idUsuario='$id';"; //Creo la consulta sql para pedir la contraseña del usuario
+                $res=mysqli_query($con, $sql); //Ejecuto la consulta y guardo el resultado en $res
+                if(mysqli_affected_rows($con)>0){ //Me fijo si hubo filas afectadas
+                    $registro=mysqli_fetch_assoc($res); //Genero un array asociativo donde los indices son los nombres de los campos
                 }
-                
-                $sql = "INSERT INTO miembros (usuario_id, fechaInicio, fechaFin, estado) VALUES(?, ?, null, 'Activo');";
+                $contra=$_POST['contrasena']; //Guardo el dato de la contraseña del usuario traida por post en la variable contra
+                if($contra == $registro['contra']){ //Verifico si los datos traidos son iguales a los que se encuentran en la base de datos
+                    $mostrarMensaje = True; //Creo y confirmo la variable para mostrar el mensaje de exito
+                    date_default_timezone_set('America/Argentina/Buenos_Aires'); //Defino que zona horaria utilizar para sacar el tiempo
+                    $fechaHoy = date('Y/m/d', time()); //Defino el día de hoy para saber cuando comienza la suscripción
+            
+                    require_once "conexion.php";
+                    $conn = conectar();
+            
+                    if ($conn->connect_error) {
+                        die("Error de conexión: " . $conn->connect_error); //En caso de error
+                    }
+                    
+                    $sql = "INSERT INTO miembros (usuario_id, fechaInicio, fechaFin, estado) VALUES(?, ?, null, 'Activo');"; //Creo la primera consulta sql para insertar los datos obtenidos en la tabla de miembros
 
-                $stmt = $conn->prepare($sql);
-                $stmt->bind_param("is", $id, $fechaHoy);
-            
-                if ($stmt->execute()) {
-                    echo "<div id='msg' class='success-msg'><p class='texto-aviso'>Ya es un miembro! Muchas gracias por asociarse a nosotros.</p></div>";
-                } else {
-                    echo "<div id='msg' class='error-msg'><p class='texto-aviso'>Error: " . $stmt->error . "</p></div>";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("is", $id, $fechaHoy);
+
+                    $sql2 = "UPDATE usuarios SET rol = 2 WHERE idUsuario = ? AND rol = 3"; //Creo la segunda consulta sql para actualizar el rol del usuario al rol de miembro
+
+                    $stmt2 = $conn->prepare($sql2);
+                    $stmt2->bind_param("i", $id);
+                    
+                    //Si se ejecutan correctamente
+                    if ($stmt->execute() && $stmt2->execute()) {
+                        echo "<div id='msg' class='success-msg'><p class='texto-aviso'>Ya es un miembro! Muchas gracias por asociarse a nosotros.</p></div>"; //Muestro el mensaje de exito
+                    } else {
+                        //Si no se ejecuta correctamente
+                        echo "<div id='msg' class='error-msg'><p class='texto-aviso'>Error: " . $stmt->error . "</p></div>"; //Muestro el mensaje de error
+                    }
+                
+                    // Cerrar la declaración
+                    $stmt->close();
                 }
-            
-                // Cerrar la declaración
-                $stmt->close();
+                else{
+                    echo '<script>alert("Contraseña incorrecta.");</script>'; //Si la contraseña no es la correcta muestro una alerta
+                }
             }
             if (isset($_POST['idUsuario'])):
         ?>
+        <!-- Estilos definidos solo si idUsuario esta presente -->
         <style>
             .texto-aviso{
                 margin: 0 auto;
@@ -87,22 +109,23 @@
             transform: translateY(-100vh);
             }
         </style>
+        <!-- Código para la animación de entrada y salida -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const mostrarMensaje = <?php echo json_encode($mostrarMensaje); ?>;
                 const mensaje = document.getElementById("msg");
 
                 if (mostrarMensaje) {
-                    // Mostrar el mensaje
+                    // Muestro el mensaje
                     mensaje.style.display = "flex";
                     mensaje.classList.add("mostrar");
 
-                    // Esperar 3 segundos y luego ocultar
+                    // Espero 3 segundos y luego lo oculto
                     setTimeout(() => {
                         mensaje.classList.add("ocultar");
                         mensaje.classList.remove("mostrar");
 
-                        // Después de la animación, ocultar el elemento del DOM
+                        // Después de la animación, oculto el elemento del DOM
                         setTimeout(() => {
                             mensaje.style.display = "none";
                         }, 500);
