@@ -29,7 +29,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61567463004675" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/celeglutenfree/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=celeglutenfree@gmail.com" target="_blank" ><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=celegluten@gmail.com" target="_blank" ><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
