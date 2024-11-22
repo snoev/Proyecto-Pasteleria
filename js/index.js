@@ -52,26 +52,3 @@ cerrar.addEventListener("click", function () {
 	modal[0].style.visibility = "hidden";
 });
 //Carrouzel de fotos ------------------------------------------------------------------------------------------------
-const slider = document.querySelector('.slider');
-const navLinks = document.querySelectorAll('.slider-nav a');
-let isScrolling = true;
-
-// Función de scroll automático
-function autoScroll() {
-    if (isScrolling) {
-        const nextScrollLeft = slider.scrollLeft + slider.offsetWidth;
-        const maxScrollLeft = slider.scrollWidth - slider.offsetWidth;
-
-        // Verificar si estamos en el último slide
-        if (nextScrollLeft >= maxScrollLeft) {
-            isScrolling = false; // Detener auto-scroll al llegar al final
-        } else {
-            slider.scrollBy({
-                left: slider.offsetWidth,
-                behavior: 'smooth',
-            });
-        }
-    }
-}
-
-// Configurar el auto-scroll

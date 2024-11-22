@@ -84,8 +84,12 @@
   margin: 0 0 20px 0;
 }
 
-p {
+#nosotros p {
   max-width: 600px;
   margin: 0 auto 20px auto;
   line-height: 1.6;
+}
+
+.container h1, h2 {
+  text-align: center; /* Centra solo el texto */
 }

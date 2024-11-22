@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/membresia.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Página Principal</title>
@@ -39,11 +40,5 @@
     <?php
         require_once 'assets/footer.php';
     ?>
-
-    <!-- Scripts -->
-    <script src="js/index.js"></script>
-    <script src="js/inputValidator.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

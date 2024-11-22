@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/nosotros.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/alan.css">
     <title>Página Principal</title>
 </head>
 <body>
@@ -36,8 +37,9 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="line"></div>
+    <section id="nosotros">
+        <div class="container">
+            <div class="line"></div>
         <h1 class="subti">Nuestros Productos</h1>
         <p>
             Nuestros productos combinan la mejor calidad y sabor, utilizando ingredientes sin gluten 
@@ -58,33 +60,31 @@
         <div class="line"></div>
         
         <div class="cont">
-        <div class="info">
-        <h2>¿Donde Estamos?</h2>
-        <p><span class="highlight">VISÍTANOS EN NUESTRA ÚNICA DIRECCIÓN</span></p>
-        <p>Venezuela 2033, B1882 Quilmes, Provincia de Buenos Aires</p>
-        <p><span class="highlight">De Lunes a Viernes:</span> 9AM-2PM | 4PM-7:30PM</p>
-        <p><span class="highlight">Sábados:</span> 9AM-2PM</p>
-        <p><span class="highlight">Domingos y Feriados:</span> Cerrado</p>
-        <p><span class="highlight">WhatsApp:</span> <a href="https://wa.me/01154740106" target="_blank">011 5474-0106</a></p>
-        </div>
+            <div class="info">
+                <h2>¿Donde Estamos?</h2>
+                <p><span class="highlight">VISÍTANOS EN NUESTRA ÚNICA DIRECCIÓN</span></p>
+                <p>Venezuela 2033, B1882 Quilmes, Provincia de Buenos Aires</p>
+                <p><span class="highlight">De Lunes a Viernes:</span> 9AM-2PM | 4PM-7:30PM</p>
+                <p><span class="highlight">Sábados:</span> 9AM-2PM</p>
+                <p><span class="highlight">Domingos y Feriados:</span> Cerrado</p>
+                <p><span class="highlight">WhatsApp:</span> <a href="https://wa.me/01154740106" target="_blank">011 5474-0106</a></p>
+            </div>
 
-        <iframe 
-        src="https://www.google.com/maps?q=https://maps.app.goo.gl/iYWBg14XJxrdgYyN6?g_st=com.google.maps.preview.copy&output=embed" 
-        width="600" 
-        height="400" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-        </iframe>
-    </div>
+            <iframe 
+            src="https://www.google.com/maps?q=https://maps.app.goo.gl/iYWBg14XJxrdgYyN6?g_st=com.google.maps.preview.copy&output=embed" 
+            width="600" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+            </div>
+    </section>
 
     <?php
         require_once 'assets/footer.php';
     ?>
 
-    <script src="js/index.js"></script>
-    <script src="js/inputValidator.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/carrusel.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <nav id="nav-pastel" class="menu">
         <ul class="nav">
             <li class="menu-option"><a class="logo-img" href="index.php"><img src="img/logo.png" alt="logo"></a></li>
-            <li class="menu-option"><a class="logo-link botones" href="">Nosotros</a></li>
+            <li class="menu-option"><a class="logo-link botones" href="index.php?#nosotros">Nosotros</a></li>
             <li class="menu-option"><a class="logo-link botones" href="productos.php">Productos</a></li>
             <li class="menu-option"><a class="logo-link botones" href="membresia.php">Membresias</a></li>
             <li class="menu-option cosologin"><a class="logo-link" id="login-boton" style="cursor: pointer;">Login</a></li>
@@ -75,7 +75,6 @@
             }
         ?>
         
-    <script src="js/carruzle.js"></script>
     <script src="js/index.js"></script>
     <script src="js/inputValidator.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -200,7 +200,7 @@ form button:hover{
 	overflow: hidden;
 }
 
-/* carruzel */
+/* carrusel */
 .carousel{
 	padding: 2rem;
 	margin-top: 5rem;	
@@ -250,55 +250,7 @@ form button:hover{
 .slider-nav a:hover{
 	opacity: 1;
 }
-/* carruzel */
-
-
-/* cards */
-.cards {
-	margin: 2%;
-	padding: 10px;
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples filas */
-    gap: 10px; /* Espacio entre las tarjetas */
-    justify-content: center; /* Centra las tarjetas si hay espacio adicional */
-	margin-top: 100px; /* Ajuste para que no se superponga con el header */
-}
-
-.card {
-    flex: 1 1 200px; /* Ancho mínimo de 250px, ajusta según el tamaño disponible */
-    max-width: 100%;
-    margin: 1%;
-    border: 3px solid var(--secondary);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.card img {
-    width: 100%;
-}
-
-.card .content {
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.card .c_foot {
-	display: flex;
-    margin: 1vh;
-	justify-content: center;
-}
-
-.card .btn{
-	position: relative;
-	border: none;
-	height: 1rem;
-	width: 75%;
-	height: 20px;
-	transition: .3s linear;
-	cursor: pointer;
-}
-/* cards */
+/* carrusel */
 
 .content-inicio {
 	width: 100%;
