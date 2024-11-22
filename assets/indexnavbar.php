@@ -28,13 +28,12 @@
             <?php if ($userlv == 1): ?>
             <li class="menu-option"><a class="logo-link" href="control_panel.php">Panel de Control</a></li>
             <?php endif; ?>
-            <?php if ($userlv == 2 || $userlv == 3): ?>
-            <span class="espacio"></span>
-            <a class="cuenta" href="index_usuario.php"><ion-icon name="person" class="log-svg"></ion-icon></a>
-            <a id="logoutnavbar" href="logout.php"><ion-icon name="log-out-outline" class="log-svg"></ion-icon></a>
-            <?php endif; ?>
-
             <div class="menu-derecha">
+                <?php if ($userlv == 2 || $userlv == 3): ?>
+                    <a class="cuenta" href="index_usuario.php"><ion-icon name="person" class="log-svg"></ion-icon></a>
+                    <a id="logoutnavbar" href="logout.php"><ion-icon name="log-out-outline" class="log-svg"></ion-icon></a>
+                <?php endif; ?>
+
                 <li class="menu-option-der">
                     <a href="https://www.facebook.com/profile.php?id=61567463004675" target="_blank">
                         <ion-icon name="logo-facebook" id="fcb"></ion-icon>

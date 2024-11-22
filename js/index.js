@@ -3,10 +3,6 @@ window.addEventListener("scroll", function () {
 	Header.classList.toggle("Sticky", window.scrollY > 90);
 });
 
-const navbarr = document.getElementById("nav-pastel");
-
-const displei = document.getElementById("displei");
-
 var navmobile = document.querySelector(".nav-mobile");
 var menu = document.querySelector(".nav");
 var opmenu = document.querySelectorAll(".menu-option");
@@ -51,4 +47,3 @@ login.addEventListener("click", function () {
 cerrar.addEventListener("click", function () {
 	modal[0].style.visibility = "hidden";
 });
-//Carrouzel de fotos ------------------------------------------------------------------------------------------------
