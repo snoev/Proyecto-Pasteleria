@@ -3,6 +3,7 @@
     width: 302px;
     height: 67px;
 }
+/* diseño general del footer */
 .footer {
     background-color: #000;
     color: #fff;
@@ -11,6 +12,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+/* secciones individuales del footer */
 .footer-section {
     flex: 1 1 200px;
     margin: 20px;
@@ -21,6 +23,7 @@
     font-size: 18px;
     text-transform: uppercase;
 }
+/* estilo para los enlaces */
 .footer a {
     color: #aaa;
     text-decoration: none;
@@ -29,6 +32,7 @@
     color: #fff;
     text-decoration: underline;
 }
+/* iconos de redes sociales */
 .social-icons a {
     margin: 0 10px;
     color: #fff;
@@ -37,6 +41,7 @@
 .social-icons a:hover {
     color: #aaa;
 }
+/* seccion inferior al footer */
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
@@ -46,6 +51,8 @@
     margin: 0;
     color: #bbb;
 }
+
+/* linea separadora */
  .linea{
     padding-bottom: 15px;
     border-bottom: 1px solid rgb(170, 170, 170); 
