@@ -38,38 +38,51 @@
     </section>
 
     <section id="nosotros">
+        <!-- Contenedor principal de la sección -->
         <div class="container">
+             <!-- Línea decorativa para separar secciones -->
             <div class="line"></div>
+              <!-- Título para la sección de productos -->
         <h1 class="subti">Nuestros Productos</h1>
+        <!-- Descripción de los productos: calidad, precio y características -->
         <p>
             Nuestros productos combinan la mejor calidad y sabor, utilizando ingredientes sin gluten 
             seleccionados cuidadosamente. Ofrecemos precios accesibles para que todos puedan disfrutar 
             de opciones deliciosas y saludables, elaboradas con un toque artesanal.
         </p>
 
+        <!-- Línea más pequeña como separador visual entre los productos y el siguiente contenido -->
         <div class="linechica"></div>
 
-
+        <!-- Subtítulo para la sección "Sobre Nosotros" -->
         <h2 class="subti">Sobre Nosotros</h2>
+        <!-- Descripción de la panadería-->
         <p>
             Somos una panadería comprometida con ofrecer opciones sin gluten que deleiten a todos. 
             Trabajamos con pasión y dedicación para garantizar productos de alta calidad, cuidando 
             cada detalle en su elaboración. ¡Nuestra misión es llenar tu mesa de momentos inolvidables!
         </p>
+
         </div>
+        <!-- Línea decorativa para separar la sección "Nosotros" del resto del contenido -->
         <div class="line"></div>
-        
+        <!-- Contenedor para la ubicación y la información de contacto -->
         <div class="cont">
+             <!-- Información textual sobre la ubicación y contacto -->
             <div class="info">
+                <!-- Título de la sección de ubicación -->
                 <h2>¿Donde Estamos?</h2>
+                <!-- Información sobre la dirección física -->
                 <p><span class="highlight">VISÍTANOS EN NUESTRA ÚNICA DIRECCIÓN</span></p>
                 <p>Venezuela 2033, B1882 Quilmes, Provincia de Buenos Aires</p>
+                 <!-- Horarios de atención por días -->
                 <p><span class="highlight">De Lunes a Viernes:</span> 9AM-2PM | 4PM-7:30PM</p>
                 <p><span class="highlight">Sábados:</span> 9AM-2PM</p>
                 <p><span class="highlight">Domingos y Feriados:</span> Cerrado</p>
+                <!-- Enlace a WhatsApp con número de contacto -->
                 <p><span class="highlight">WhatsApp:</span> <a href="https://wa.me/01154740106" target="_blank">011 5474-0106</a></p>
             </div>
-
+             <!-- Mapa incrustado con la ubicación de la panadería -->
             <iframe 
             src="https://www.google.com/maps?q=https://maps.app.goo.gl/iYWBg14XJxrdgYyN6?g_st=com.google.maps.preview.copy&output=embed" 
             width="600" 
