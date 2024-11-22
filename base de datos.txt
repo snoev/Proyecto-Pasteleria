@@ -168,3 +168,4 @@ update productos set imagen_url = "leche-almendras.jpg" where idProducto = 21;
 update productos set imagen_url = "leche-coco.png" where idProducto = 22;
 #update productos set imagen_url = "" where idProducto = 23;
 
+ALTER TABLE miembros ADD UNIQUE(usuario_id);

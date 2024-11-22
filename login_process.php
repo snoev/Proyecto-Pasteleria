@@ -20,15 +20,15 @@ if(mysqli_affected_rows($con)>0){ //me fijo si hubo filas afectadas
         switch($registro['rol']){
             case 1:
                 //echo "es un admin";
-                header("location: administradores/control_panel.php");
+                header("location: control_panel.php");
                 break;
             case 2:
                 //echo "es un miembro";
-                header("location: usuarios/index_usuario.php");
+                header("location: index_usuario.php");
                 break;
             case 3:
                 //echo "es un cliente";
-                header("location: usuarios/index_usuario.php");
+                header("location: index_usuario.php");
                 break;
             default:
                 echo "ROL NO DEFINIDO";
