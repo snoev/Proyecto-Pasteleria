@@ -37,6 +37,7 @@
 
         $result = $conn->query($sql);
                 
+        /* trae y da estructura los campos de la fila llamada por el idPrducto */
         $row = $result->fetch_assoc();
         ?>
         <div class="producto">
@@ -66,6 +67,7 @@
     }
     ?>
 
+    <!-- Un carrusel para ver demás productos -->
     <div class="masProd">
         <h1>Productos Relacionados</h1>
         <div class="carrusel">
