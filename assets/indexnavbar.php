@@ -26,7 +26,7 @@
                 </style>
             <?php endif; ?>
             <?php if ($userlv == 1): ?>
-            <li class="menu-option"><a class="logo-link" href="administradores/control_panel.php">Panel de Control</a></li>
+            <li class="menu-option"><a class="logo-link" href="control_panel.php">Panel de Control</a></li>
             <?php endif; ?>
             <?php if ($userlv == 2 || $userlv == 3): ?>
             <span class="espacio"></span>
